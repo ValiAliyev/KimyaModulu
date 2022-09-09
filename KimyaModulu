@@ -1,0 +1,43 @@
+class Element:
+    def __init__(self,sira_no, kutle):
+        self.sira_no = int(sira_no)
+        self.kutle = int(kutle)
+        self.neytron = self.kutle - self.sira_no
+
+    def ProtonSay(self):
+        return self.sira_no
+
+    def ElektronSay(self):
+        return self.sira_no
+
+    def NeytronSay(self):
+        return self.neytron
+
+
+
+class BiratomluMolekul:
+    def __init__(self,ArElement,Index):
+        self.ArElement = int(ArElement)
+        self.Index = int(Index)
+        self.Mr = self.ArElement * self.Index
+
+
+class IkiatomluMolekul:
+    def __init__(self, ArElement1, Index1,ArElement2, Index2):
+        self.ArElement1 = int(ArElement1)
+        self.Index1 = int(Index1)
+        self.ArElement2 = int(ArElement2)
+        self.Index2 = int(Index2)
+        self.Mr = self.ArElement1*self.Index1 + self.ArElement2*self.Index2
+
+    def OmeqaElement1(self):
+        return ((self.ArElement1*self.Index1)/ self.Mr)*100
+
+    def OmeqaElement2(self):
+        return ((self.ArElement2*self.Index2)/ self.Mr)*100
+
+    def IndexCem(self):
+        return self.Index1 + self.Index2
+
+
+
