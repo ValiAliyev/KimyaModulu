@@ -1,0 +1,28 @@
+from KimyaModulu import Element
+from KimyaModulu import BiratomluMolekul
+from KimyaModulu import IkiatomluMolekul
+
+H = Element(1,1)
+He = Element(2,4)
+O = Element(8,16)
+N = Element(7,14)
+C = Element(6,12)
+
+H2O = IkiatomluMolekul(H.kutle,2,O.kutle,1)
+NH3 = IkiatomluMolekul(N.kutle,1,H.kutle,3)
+C2H6 = IkiatomluMolekul(C.kutle,2,H.kutle,6)
+CO2 = IkiatomluMolekul(C.kutle,1,O.kutle,2)
+
+print(int(CO2.OmeqaElement1()))
+print(C2H6.IndexCem())
+
+
+if C2H6.Mr > CO2.Mr:
+    print("Birinci molekul daah agirdir!")
+elif C2H6.Mr < CO2.Mr:
+    print("Ikinci molekul daha agirdir!")
+
+
+
+
+
